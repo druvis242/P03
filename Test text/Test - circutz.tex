@@ -1,0 +1,32 @@
+\documentclass{report}
+\usepackage[siunitx]{circuitikz}
+\usepackage[USenglish]{babel}
+\usepackage[american, siunitx]{circuitikz}
+\usetikzlibrary{babel}
+\begin{document}
+
+\begin{center}
+    \begin{circuitikz}[american voltages]
+        \draw
+            (0,0)   to[battery1, l=$V_1$] (0,5)
+                    to[european resistor, l=$R_1$] (5,5)
+                    to[european resistor, l=$R_2$] (5,0) -- (4,0)
+                    to (0.5,0) -- (0,0)
+  \end{circuitikz}
+\end{center}
+
+\begin{center}
+    \begin{circuitikz}[american voltages]
+        \draw
+            [fill] (4,5) circle (0.3ex) node [above] {2}
+            [fill] (0,3.5) circle (0.3ex) node [left] {1}
+            
+            (0,0)   to[battery1, l = $V_1$] (0,5)
+                    to[european resistor, l = $R_1$] (5,5)
+                    to[european resistor, l = $R_2$] (5,0) -- (4,0)
+                    to (0.5,0) -- (0,0)
+                    [fill] (5,0.5) circle (0.3ex) node [right] {0}
+  \end{circuitikz}
+\end{center}
+
+\end{document}
